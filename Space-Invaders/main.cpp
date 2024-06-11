@@ -9,7 +9,7 @@ int main(){
     RenderWindow* window = new RenderWindow(videoMode, "Practice Window");
 
     //Set window posiiton
-    window->setPosition(Vector2(100,100));
+    window->setPosition(Vector2i(100,100));
 
     //Game loop
     while(window->isOpen()){
@@ -27,21 +27,24 @@ int main(){
         window->setFramerateLimit(60);
 
         //clear the window (default colour : black)
-        window->clear();
+        window->clear(Color::Blue);
 
-        CircleShape circle(50); //Radius
-        circle.setFillColor(Color::Red); //Fill colour
-        circle.setPosition(0,0); //set position
-        window->draw(circle);
+        //CircleShape circle(50); //Radius
+        //circle.setFillColor(Color::Red); //Fill colour
+        //circle.setPosition(0,0); //set position
+        //window->draw(circle);
 
-        RectangleShape rectangle(Vector2f(10,20));
-        rectangle.setFillColor(Color::Green);
-        rectangle.setPosition(200,0);
-        window->draw(rectangle);
+        //RectangleShape rectangle(Vector2f(200,100));
+        //rectangle.setFillColor(Color::Green);
+        //rectangle.setPosition(200,0);
+        //window->draw(rectangle);
 
         ConvexShape convex(5);
-        convex.setFillColor(Color::Magenta);
-        convex.setPosition(400,0);
+        convex.setPoint(0, sf::Vector2f(0.f, 0.f));
+        convex.setPoint(1, sf::Vector2f(150.f, 10.f));
+        convex.setPoint(2, sf::Vector2f(120.f, 90.f));
+        convex.setPoint(3, sf::Vector2f(30.f, 100.f));
+        convex.setPoint(4, sf::Vector2f(0.f, 50.f));
         window->draw(convex);
         
         //Display what was draw
