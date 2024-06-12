@@ -1,4 +1,7 @@
 #include<SFML/Graphics.hpp>
+#include "MAIN.H"
+#include <iostream>
+
 using namespace sf;
 
 int main()
@@ -21,19 +24,27 @@ int main()
         //Green Circle
         CircleShape circle(100);
         circle.setFillColor(Color::Green);
-        circle.setPosition(0,0);
-        window->draw(circle);
-
         //Red Square 
         RectangleShape square(Vector2f(180,180));
         square.setFillColor(Color::Red);
-        square.setPosition((window->getSize().x - square.getSize().x) - 2, (window->getSize().y / 2) - square.getSize().y);
-        window->draw(square);
-
         //Blue Triangle
-        CircleShape triangle(100,3);
+        CircleShape triangle(130,3);
         triangle.setFillColor(Color::Blue);
-        triangle.setPosition(400,0);
+
+        //Set the Positioin of all shapes
+        circle.setPosition(
+            (window->getSize().x / 2) - (circle.getRadius() * 3.5),
+            (window->getSize().y / 2) - circle.getRadius());
+        square.setPosition(
+            (window->getSize().x / 2) - square.getSize().x / 2,
+            (window->getSize().y / 2) - square.getSize().y / 2);
+        triangle.setPosition(
+            (window->getSize().x / 2) + (triangle.getRadius()),
+            (window->getSize().y / 2) - (triangle.getRadius() - 15));
+
+        //Drawing the shapes with specific order
+        window->draw(circle);
+        window->draw(square);
         window->draw(triangle);
 
         window->display();
