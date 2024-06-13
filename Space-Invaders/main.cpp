@@ -6,12 +6,18 @@ using namespace std;
 
 class Player {
     public :
-        Texture player_texture;
-        Sprite player_sprite;
         int health = 3;
         Vector2f position = Vector2f(200.0f, 100.0f);
         int movement_speed = 5;
         int player_score = 0;
+        
+    private :
+        Texture player_texture;
+        Sprite player_sprite;
+
+        void takeDamage();
+        void move();
+        void shootBullets();
 };
 
 int main() {
