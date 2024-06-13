@@ -15,8 +15,16 @@ class Player {
         Texture player_texture;
         Sprite player_sprite;
 
+        void move(float offset){
+            position.x += offset;
+        }
+        int GetMovementSpeed(){
+            return movement_speed;
+        }
+        Vector2f GetPosition(){
+            return position;
+        }
         void takeDamage();
-        void move();
         void shootBullets();
 };
 
@@ -44,18 +52,18 @@ int main() {
         //Left and Right keyboard input
         if(Keyboard::isKeyPressed(Keyboard::Left)){
             //leftMove()
-            playerShip.move();
+            playerShip.move(-1.0 * playerShip.GetMovementSpeed());
         }
         if(Keyboard::isKeyPressed(Keyboard::Right)){
             //rightMove()
-            playerShip.move();
+            playerShip.move(1.0 * playerShip.GetMovementSpeed());
         }
 
         // Clear the window
         window->clear(Color::Blue);
 
         //set the positon of the sprite
-        playerShip.player_sprite.setPosition(playerShip.player_sprite.getPosition());
+        playerShip.player_sprite.setPosition(playerShip.GetPosition());
         //drawing the sprite on the screen
         window->draw(playerShip.player_sprite);
 
