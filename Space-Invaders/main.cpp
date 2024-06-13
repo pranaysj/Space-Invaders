@@ -36,6 +36,9 @@ int main() {
     // Create a window object with specific dimensions and a title
     RenderWindow* window= new RenderWindow(*videoMode, "SFML Window");
 
+    //Set the Frame rate of the game
+    window->setFramerateLimit(60);
+
     //Declare the player object and assign sprite to it.
     Player playerShip;
     playerShip.player_texture.loadFromFile("assets/textures/player_ship.png");
