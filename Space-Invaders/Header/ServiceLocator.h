@@ -1,15 +1,23 @@
 #pragma once
+#include "GraphicService.h"
 
 class ServiceLocator{
     private :
+
+        GraphicService *graphicService;
+
         ServiceLocator();
         ~ServiceLocator();
-        void CreateServiceLocator();
-        void ClearAllServiceLocator();
+
+        void CreateService();
+        void ClearAllService();
 
     public :
         static ServiceLocator* GetInstance();
+
         void Initialize();
         void Update();
         void Render();
+
+        GraphicService *GetGraphicsService();
 };
