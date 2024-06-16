@@ -24,7 +24,6 @@ ServiceLocator *ServiceLocator::GetInstance(){
 }
 
 void ServiceLocator::Initialize(){
-    CreateService();
     graphicService->Initialize();
 }
 
