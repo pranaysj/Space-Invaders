@@ -1,23 +1,29 @@
 #pragma once
-#include "GraphicService.h"
+#include "../Header/GraphicService.h"
 
-class ServiceLocator{
-    private :
+class ServiceLocator
+{
+private:
+    // Private Attributes:
+    GraphicService* graphic_service;
 
-        GraphicService *graphicService;
+    // Private Constructor and Destructor:
+    ServiceLocator();
+    // Constructor for initializing the ServiceLocator.
+    ~ServiceLocator(); 	// Destructor for cleaning up resources upon object deletion.
 
-        ServiceLocator();
-        ~ServiceLocator();
+    // Private Methods:
+    void createServices(); 			// Creates instances of all services.
+    void clearAllServices(); 		//	Deletes and deallocates memory for all services.
 
-        void CreateService();
-        void ClearAllService();
+public:
+    // Public Methods:
+    static ServiceLocator* getInstance(); 			// Provides a method to access the unique ServiceLocator instance (object).
+    void initialize(); 			//	Initializes the ServiceLocator.
+    void update(); 				//	Updates all services.
+    void render(); 				//	Renders using the services.
 
-    public :
-        static ServiceLocator* GetInstance();
+    // Methods to Get Specific Services: 
+    GraphicService* getGraphicService();
 
-        void Initialize();
-        void Update();
-        void Render();
-
-        GraphicService *GetGraphicsService();
 };
