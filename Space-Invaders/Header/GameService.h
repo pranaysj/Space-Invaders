@@ -1,11 +1,11 @@
-#pragma onece
+#pragma once
 #include <SFML/Graphics.hpp>
-#include "ServiceLocator.h"
+#include "../Header//ServiceLocator.h"
 
 class GameService{
     private :
         ServiceLocator *serviceLocator;
-        sf::RenderWindow *gameWindow;
+        RenderWindow *gameWindow;
 
         void Initialize();
         void InitializeVariable();

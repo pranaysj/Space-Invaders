@@ -1,5 +1,5 @@
-#include "Header/GameService.h"
-#include "GameService.h"
+#include "../Header/GameService.h"
+#include "../Header/GraphicService.h"
 
 void GameService::Initialize(){
     serviceLocator->Initialize();

@@ -1,5 +1,4 @@
-#include "Header/ServiceLocator.h"
-#include "ServiceLocator.h"
+#include "../Header/ServiceLocator.h"
 
 ServiceLocator::ServiceLocator(){
     graphicService = nullptr;
@@ -25,6 +24,7 @@ ServiceLocator *ServiceLocator::GetInstance(){
 }
 
 void ServiceLocator::Initialize(){
+    CreateService();
     graphicService->Initialize();
 }
 
