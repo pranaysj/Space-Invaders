@@ -1,5 +1,5 @@
 #include "../Header/GameService.h"
-#include "../Header/GraphicService.h"
+// #include "../Header/GraphicService.h"
 
 void GameService::Initialize(){
     serviceLocator->Initialize();
@@ -30,6 +30,7 @@ void GameService::Ignite(){
 }
 
 void GameService::Update(){
+    serviceLocator->GetEventService()->ProcessEvent();
     serviceLocator->Update();
 }
 
