@@ -20,4 +20,7 @@ class EventService{
         bool PressedEscapeKey();
         bool IsKeyboardEvent();
 
+        bool PressedLeftKey();
+        bool PressedRightKey();
+
 };

@@ -83,6 +83,7 @@ int main() {
     
     while (gameService->IsRunning())
     {
+        
         gameService->Update();
         gameService->Render();
     }
