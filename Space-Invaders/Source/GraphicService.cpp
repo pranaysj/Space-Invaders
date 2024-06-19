@@ -25,6 +25,7 @@ RenderWindow *GraphicService::createGameWindow(){
 
 void GraphicService::Initialize(){
     gameWindow = createGameWindow();
+    gameWindow->setFramerateLimit(frameRate);
 }
 
 void GraphicService::Update(){

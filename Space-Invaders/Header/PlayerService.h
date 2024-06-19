@@ -8,7 +8,7 @@ class PlayerService{
 
         int health = 3;
         Vector2f position = Vector2f(200.0f, 100.0f);
-        int movement_speed = 5;
+        float movement_speed = 5;
         int player_score = 0;
         const string playerTexturePath = "assets/textures/player_ship.png";
 
@@ -19,6 +19,8 @@ class PlayerService{
 
         void InitiallayerSprite();
         void ProcessPlayerInput();
+        void MoveLeft();
+        void MoveRight();
 
     public :
 

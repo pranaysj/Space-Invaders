@@ -32,15 +32,23 @@ void PlayerService::ProcessPlayerInput(){
     EventService *eventService = ServiceLocator::GetInstance()->GetEventService();
 
     if(eventService->PressedLeftKey()){
-        Move(-1.0 * GetMovementSpeed());
+        MoveLeft();
     }
     if(eventService->PressedRightKey()){
-        Move(1.0 * GetMovementSpeed());
+        MoveRight();
     }
 }
 
-void PlayerService::Move(float offset){
-    position.x += offset;
+// void PlayerService::Move(float offset){
+//     position.x += offset;
+// }
+
+void PlayerService::MoveLeft(){
+    position.x -= GetMovementSpeed() * ServiceLocator::GetInstance()->GetTimeService()->GetDeltaTime();
+}
+
+void PlayerService::MoveRight(){
+    position.x += GetMovementSpeed() * ServiceLocator::GetInstance()->GetTimeService()->GetDeltaTime();
 }
 
 int PlayerService::GetMovementSpeed(){

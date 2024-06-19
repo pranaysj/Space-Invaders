@@ -11,6 +11,7 @@ class GraphicService{
         const int game_window_width = 800;
         const int game_window_height = 600;
         const Color window_color = Color::Blue;
+        const int frameRate = 60;
 
         VideoMode *videoMode;
         RenderWindow *gameWindow;
