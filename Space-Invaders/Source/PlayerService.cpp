@@ -30,12 +30,14 @@ void PlayerService::InitiallayerSprite(){
 void PlayerService::ProcessPlayerInput(){
 
     EventService *eventService = ServiceLocator::GetInstance()->GetEventService();
-
-    if(eventService->PressedLeftKey()){
-        MoveLeft();
-    }
-    if(eventService->PressedRightKey()){
-        MoveRight();
+    
+    if (eventService->IsKeyboardEvent()) {
+        if (eventService->PressedLeftKey()) {
+            MoveLeft();
+        }
+        if (eventService->PressedRightKey()) {
+            MoveRight();
+        }
     }
 }
 

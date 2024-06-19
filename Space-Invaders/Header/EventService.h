@@ -4,8 +4,8 @@ using namespace sf;
 
 class EventService{
     private :
-        RenderWindow *gameWindow;
         Event gameEvent;
+        RenderWindow *gameWindow;
         bool IsGameWindowOpen();
         bool HasQuitGame();
         bool GameWindowWasClosed();

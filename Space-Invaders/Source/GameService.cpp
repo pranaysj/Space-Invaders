@@ -1,5 +1,5 @@
 #include "../Header/GameService.h"
-// #include "../Header/GraphicService.h"
+//#include "../Header/GraphicService.h"
 
 void GameService::Initialize(){
     serviceLocator->Initialize();
@@ -11,8 +11,7 @@ void GameService::InitializeVariable(){
 }
 
 void GameService::Destory(){
-    delete(gameWindow);
-    gameWindow = nullptr;
+    
 }
 
 GameService::GameService(){

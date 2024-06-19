@@ -41,7 +41,7 @@ bool EventService::IsGameWindowOpen(){
 }
 
 bool EventService::HasQuitGame(){
-    return (PressedEscapeKey && IsKeyboardEvent);
+    return (PressedEscapeKey() && IsKeyboardEvent());
 }
 
 bool EventService::GameWindowWasClosed()
