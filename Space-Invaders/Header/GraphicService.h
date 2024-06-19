@@ -14,6 +14,8 @@ private:
 
 	const sf::Color window_color = sf::Color::Blue;
 
+	const int frame_rate = 60;
+
 	sf::VideoMode* video_mode; // ptr to video mode
 	sf::RenderWindow* game_window; // ptr to a RenderWindow
 
