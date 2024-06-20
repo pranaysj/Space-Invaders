@@ -27,7 +27,7 @@ void ServiceLocator::ClearAllService(){
 }
 
 ServiceLocator *ServiceLocator::GetInstance(){
-    ServiceLocator instance;
+    static ServiceLocator instance;
     return &instance;
 }
 
@@ -42,6 +42,7 @@ void ServiceLocator::Update(){
     graphicService->Update();
     eventService->Update();
     playerService->Update();
+    timeService->Update();
 }
 
 void ServiceLocator::Render(){

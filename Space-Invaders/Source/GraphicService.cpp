@@ -1,14 +1,5 @@
 #include "../Header/GraphicService.h"
 
-void GraphicService::setVideoMode(){
-    videoMode = new sf::VideoMode(game_window_width,game_window_height,sf::VideoMode::getDesktopMode().bitsPerPixel);
-}
-
-void GraphicService::OnDestory(){
-    delete(videoMode);
-    delete(gameWindow);
-}
-
 GraphicService::GraphicService(){
     videoMode = nullptr;
     gameWindow = nullptr;
@@ -18,6 +9,15 @@ GraphicService::~GraphicService(){
     OnDestory();
 }
 
+void GraphicService::OnDestory(){
+    delete(videoMode);
+    delete(gameWindow);
+}
+
+void GraphicService::setVideoMode(){
+    videoMode = new sf::VideoMode(game_window_width,game_window_height,sf::VideoMode::getDesktopMode().bitsPerPixel);
+}
+
 RenderWindow *GraphicService::createGameWindow(){
     setVideoMode();
     return new sf::RenderWindow(*videoMode,game_window_title);
@@ -25,11 +25,10 @@ RenderWindow *GraphicService::createGameWindow(){
 
 void GraphicService::Initialize(){
     gameWindow = createGameWindow();
-    gameWindow->setFramerateLimit(frameRate);
+    //gameWindow->setFramerateLimit(frameRate);
 }
 
 void GraphicService::Update(){
-    cout << "Graphssss";
 }
 
 void GraphicService::Render(){

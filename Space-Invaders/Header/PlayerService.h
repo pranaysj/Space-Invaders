@@ -1,16 +1,16 @@
 #pragma once
 #include<SFML/Graphics.hpp>
 using namespace sf;
-using namespace std;
 
 class PlayerService{
     private :
 
         int health = 3;
         Vector2f position = Vector2f(200.0f, 100.0f);
-        float movement_speed = 5;
-        int player_score = 0;
-        const string playerTexturePath = "assets/textures/player_ship.png";
+        float movementSpeed = 100;
+        int playerScore = 0;
+
+        const String playerTexturePath = "assets/textures/player_ship.png";
 
         RenderWindow *gameWindow;
 
@@ -19,8 +19,6 @@ class PlayerService{
 
         void InitiallayerSprite();
         void ProcessPlayerInput();
-        void MoveLeft();
-        void MoveRight();
 
     public :
 
@@ -31,7 +29,9 @@ class PlayerService{
         void Update();
         void Render();
 
-        void Move(float offset);
+        void MoveLeft();
+        void MoveRight();
+        //void Move(float offset);
         int GetMovementSpeed();
         Vector2f GetPosition();
 

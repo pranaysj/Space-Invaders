@@ -30,12 +30,14 @@ void PlayerService::InitiallayerSprite(){
 void PlayerService::ProcessPlayerInput(){
 
     EventService *eventService = ServiceLocator::GetInstance()->GetEventService();
-
-    if(eventService->PressedLeftKey()){
-        MoveLeft();
-    }
-    if(eventService->PressedRightKey()){
-        MoveRight();
+    
+    if (eventService->IsKeyboardEvent()) {
+        if (eventService->PressedLeftKey()) {
+            MoveLeft();
+        }
+        if (eventService->PressedRightKey()) {
+            MoveRight();
+        }
     }
 }
 
@@ -44,16 +46,16 @@ void PlayerService::ProcessPlayerInput(){
 // }
 
 void PlayerService::MoveLeft(){
-    position.x -= GetMovementSpeed() * ServiceLocator::GetInstance()->GetTimeService()->GetDeltaTime();
+    position.x -= movementSpeed * ServiceLocator::GetInstance()->GetTimeService()->GetDeltaTime();
 }
 
 void PlayerService::MoveRight(){
-    position.x += GetMovementSpeed() * ServiceLocator::GetInstance()->GetTimeService()->GetDeltaTime();
+    position.x += movementSpeed * ServiceLocator::GetInstance()->GetTimeService()->GetDeltaTime();
 }
 
-int PlayerService::GetMovementSpeed(){
-    return movement_speed;
-}
+//int PlayerService::GetMovementSpeed(){
+//    return movement_speed;
+//}
 
 Vector2f PlayerService::GetPosition(){
     return position;
