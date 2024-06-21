@@ -4,29 +4,32 @@
 #include "../../Header/Player/PlayerService.h"
 #include "../../Header/Time/TimeService.h"
 
-class ServiceLocator{
-    private :
+namespace Global {
 
-        GraphicService *graphicService;
-        EventService *eventService;
-        PlayerService *playerService;
-        TimeService *timeService;
+    class ServiceLocator {
+        private:
 
-        ServiceLocator();
-        ~ServiceLocator();
+            Graphics::GraphicService* graphicService;
+            Event::EventService* eventService;
+            Player::PlayerService* playerService;
+            Time::TimeService* timeService;
 
-        void CreateService();
-        void ClearAllService();
+            ServiceLocator();
+            ~ServiceLocator();
 
-    public :
-        static ServiceLocator* GetInstance();
+            void CreateService();
+            void ClearAllService();
 
-        void Initialize();
-        void Update();
-        void Render();
+        public:
+            static ServiceLocator* GetInstance();
 
-        GraphicService *GetGraphicsService();
-        EventService *GetEventService();
-        PlayerService *GetPlayerService();
-        TimeService *GetTimeService();
-};
+            void Initialize();
+            void Update();
+            void Render();
+
+            Graphics::GraphicService* GetGraphicsService();
+            Event::EventService* GetEventService();
+            Player::PlayerService* GetPlayerService();
+            Time:: TimeService* GetTimeService();
+        };
+}

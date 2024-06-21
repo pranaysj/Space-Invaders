@@ -1,20 +1,22 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 
-using namespace sf;
 
-class PlayerController;
+namespace Player {
+	using namespace sf;
 
-class PlayerView{
+	class PlayerController;
+
+	class PlayerView {
 	private:
 
-		PlayerController *playerController;
+		PlayerController* playerController;
 
 		const String playerTexturePath = "assets/textures/Ultraman.png";
 		const float playerSpriteWidth = 60.0f;
 		const float playerSpriteHeigh = 100.0f;
 
-		RenderWindow *gameWindow;
+		RenderWindow* gameWindow;
 
 		Texture playerTexture;
 		Sprite playerSprite;
@@ -29,4 +31,5 @@ class PlayerView{
 		void Initialize(PlayerController* controller);
 		void Update();
 		void Render();
-};
+	};
+}

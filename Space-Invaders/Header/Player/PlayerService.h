@@ -1,14 +1,15 @@
 #pragma once
 #include<SFML/Graphics.hpp>
 
-using namespace sf;
+namespace Player {
+    using namespace sf;
 
-class PlayerController;
+    class PlayerController;
 
-class PlayerService{
-    private :
+    class PlayerService {
+    private:
         PlayerController* playerController;
-    public :
+    public:
 
         PlayerService();
         ~PlayerService();
@@ -17,4 +18,6 @@ class PlayerService{
         void Update();
         void Render();
 
-};
+    };
+}
+

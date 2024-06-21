@@ -3,57 +3,63 @@
 #include "../../Header/Player/PlayerModel.h"
 #include "../../Header/Player/PlayerView.h"
 
-PlayerController::PlayerController(){
-	playerModel = new PlayerModel();
-	playerView = new PlayerView();
-}
+namespace Player {
+	using namespace Global;
 
-PlayerController::~PlayerController(){
-	delete(playerModel);
-	delete(playerView);
-}
-
-void PlayerController::Initialize(){
-	playerModel->Initialize();
-	playerView->Initialize(this); //this
-}
-
-void PlayerController::Update(){
-	ProcessPlayerInput();
-	playerView->Update();
-}
-
-void PlayerController::Render(){
-	playerView->Render();
-}
-
-void PlayerController::ProcessPlayerInput() {
-	if (Keyboard::isKeyPressed(Keyboard::Left)) {
-		MoveLeft();
+	PlayerController::PlayerController() {
+		playerModel = new PlayerModel();
+		playerView = new PlayerView();
 	}
-	if (Keyboard::isKeyPressed(Keyboard::Right)) {
-		MoveRight();
+
+	PlayerController::~PlayerController() {
+		delete(playerModel);
+		delete(playerView);
 	}
+
+	void PlayerController::Initialize() {
+		playerModel->Initialize();
+		playerView->Initialize(this); //this
+	}
+
+	void PlayerController::Update() {
+		ProcessPlayerInput();
+		playerView->Update();
+	}
+
+	void PlayerController::Render() {
+		playerView->Render();
+	}
+
+	void PlayerController::ProcessPlayerInput() {
+		if (Keyboard::isKeyPressed(Keyboard::Left)) {
+			MoveLeft();
+		}
+		if (Keyboard::isKeyPressed(Keyboard::Right)) {
+			MoveRight();
+		}
+	}
+
+	void PlayerController::MoveLeft() {
+		Vector2f currentPosition = playerModel->GetPlayerPosition();
+		currentPosition.x -= playerModel->maximumSpeed * ServiceLocator::GetInstance()->GetTimeService()->GetDeltaTime();
+
+		currentPosition.x = max(currentPosition.x, playerModel->leftMostPosition.x);
+		playerModel->SetPlayerPosition(currentPosition);
+	}
+
+	void PlayerController::MoveRight() {
+		Vector2f currentPosition = playerModel->GetPlayerPosition();
+		currentPosition.x += playerModel->maximumSpeed * ServiceLocator::GetInstance()->GetTimeService()->GetDeltaTime();
+
+		currentPosition.x = min(currentPosition.x, playerModel->rightMostPosition.x);
+		playerModel->SetPlayerPosition(currentPosition);
+	}
+
+
+	Vector2f PlayerController::GetPlayerPosition() {
+
+		return playerModel->GetPlayerPosition();
+	}
+
 }
 
-void PlayerController::MoveLeft() {
-	Vector2f currentPosition = playerModel->GetPlayerPosition();
-	currentPosition.x -= playerModel->maximumSpeed * ServiceLocator::GetInstance()->GetTimeService()->GetDeltaTime();
-
-	currentPosition.x = max(currentPosition.x, playerModel->leftMostPosition.x);
-	playerModel->SetPlayerPosition(currentPosition);
-}
-
-void PlayerController::MoveRight() {
-	Vector2f currentPosition = playerModel->GetPlayerPosition();
-	currentPosition.x += playerModel->maximumSpeed * ServiceLocator::GetInstance()->GetTimeService()->GetDeltaTime();
-
-	currentPosition.x = min(currentPosition.x, playerModel->rightMostPosition.x);
-	playerModel->SetPlayerPosition(currentPosition);
-}
-
-
-Vector2f PlayerController::GetPlayerPosition(){
-
-	return playerModel->GetPlayerPosition();
-}
