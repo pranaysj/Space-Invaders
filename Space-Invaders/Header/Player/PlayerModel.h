@@ -2,11 +2,17 @@
 #include<SFML/Graphics.hpp>
 using namespace sf;
 
+enum class PlayerState {
+    ALIVE,
+    DEAD
+};
+
 class PlayerModel{
     private:
         Vector2f initialPlayerPosition = Vector2f(500.0f, 500.0f);
         Vector2f playerPositon;
-        bool playerAlive;
+        PlayerState playerState;
+        int playerScore;
 
     public:
 
@@ -22,9 +28,14 @@ class PlayerModel{
         void Reset();
 
         Vector2f GetPlayerPosition();
-        void SetPlayerPosition(Vector2f position);
+        void SetPlayerPosition(Vector2f _position);
 
-        bool GetPlayerAlive();
-        void SetPlayerAlive(bool alive);
+        int GetPlayerScore();
+        void SetPlayerScore(int _score);
+
+        PlayerState GetPlayerState();
+        void SetPlayerState(PlayerState _state);
+
+
 
 };
