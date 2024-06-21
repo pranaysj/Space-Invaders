@@ -1,6 +1,7 @@
 #include "../../Header/Player/PlayerController.h"
-#include"../../Header/ServiceLocator.h"
-
+#include"../../Header/Global/ServiceLocator.h"
+#include "../../Header/Player/PlayerModel.h"
+#include "../../Header/Player/PlayerView.h"
 
 PlayerController::PlayerController(){
 	playerModel = new PlayerModel();
@@ -47,7 +48,7 @@ void PlayerController::MoveRight() {
 	Vector2f currentPosition = playerModel->GetPlayerPosition();
 	currentPosition.x += playerModel->maximumSpeed * ServiceLocator::GetInstance()->GetTimeService()->GetDeltaTime();
 
-	currentPosition.x = min(currentPosition.x, playerModel->leftMostPosition.x);
+	currentPosition.x = min(currentPosition.x, playerModel->rightMostPosition.x);
 	playerModel->SetPlayerPosition(currentPosition);
 }
 

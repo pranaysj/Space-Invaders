@@ -1,4 +1,4 @@
-#include "../Header/GameService.h"
+#include "../../Header/Main/GameService.h"
 //#include "../Header/GraphicService.h"
 
 void GameService::Initialize(){

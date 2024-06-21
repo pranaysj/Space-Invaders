@@ -1,6 +1,7 @@
 #pragma once
 #include <SFML/Graphics.hpp>
-#include "../Header/ServiceLocator.h"
+#include "../../Header/Global/ServiceLocator.h"
+using namespace sf;
 
 class GameService{
     private :

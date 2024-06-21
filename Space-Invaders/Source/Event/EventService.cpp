@@ -1,5 +1,5 @@
-#include "../Header/EventService.h"
-#include "../Header/ServiceLocator.h"
+#include "../../Header/Event/EventService.h"
+#include "../../Header/Global/ServiceLocator.h"
 
 EventService::EventService(){
     gameWindow = nullptr;

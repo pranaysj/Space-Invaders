@@ -1,8 +1,11 @@
 #pragma once
 #include <SFML/Graphics.hpp>
-#include "../Player/PlayerModel.h"
-#include "../Player/PlayerView.h"
+using namespace sf;
 
+
+enum class PlayerState;
+class PlayerModel;
+class PlayerView;
 
 class PlayerController{
 private:

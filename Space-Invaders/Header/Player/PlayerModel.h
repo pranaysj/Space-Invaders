@@ -16,8 +16,8 @@ class PlayerModel{
 
     public:
 
-        const Vector2f leftMostPosition = Vector2f (50.0f,0.0f);
-        const Vector2f rightMostPosition = Vector2f (7000.0f, 0.0f);
+        const Vector2f leftMostPosition = Vector2f (40.0f,0.0f);
+        const Vector2f rightMostPosition = Vector2f (700.0f, 0.0f);
 
         const float maximumSpeed = 200.0f;
 

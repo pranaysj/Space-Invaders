@@ -1,16 +1,18 @@
 #pragma once
 #include <SFML/Graphics.hpp>
-#include "../../Header/Player/PlayerController.h"
+
 using namespace sf;
+
+class PlayerController;
 
 class PlayerView{
 	private:
 
 		PlayerController *playerController;
 
-		const String playerTexturePath = "assets/textures/player_ship.png";
+		const String playerTexturePath = "assets/textures/Ultraman.png";
 		const float playerSpriteWidth = 60.0f;
-		const float playerSpriteHeigh = 60.0f;
+		const float playerSpriteHeigh = 100.0f;
 
 		RenderWindow *gameWindow;
 
@@ -24,7 +26,7 @@ class PlayerView{
 		PlayerView();
 		~PlayerView();
 
-		void Initialize(PlayerController* controller;);
+		void Initialize(PlayerController* controller);
 		void Update();
 		void Render();
 };
