@@ -5,11 +5,17 @@
 namespace Main {
 
     using namespace sf;
-    //class ServiceLocator;
-    
+
+    enum class GameState {
+        BOOT,
+        MAIN_MENU,
+        GAMEPLAY
+    };
 
     class GameService {
     private:
+        static GameState currentState;
+
         Global::ServiceLocator* serviceLocator;
         RenderWindow* gameWindow;
 
@@ -25,5 +31,8 @@ namespace Main {
         void Update();
         void Render();
         bool IsRunning();
+
+        static void SetGameState(GameState _state);
+        static GameState GetGameState();
     };
 }
