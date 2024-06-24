@@ -3,10 +3,11 @@
 
 namespace UI {
 
+	using namespace Main;
 	using namespace MainMenu;
 
 	void UIService::CreateControllers() {
-		mainMenuController = new MainMenuUIController();
+		mainMenuController = new MainMenu::MainMenuUIController();
 	}
 
 	void UIService::InitializeControllers() {

@@ -3,6 +3,7 @@
 
 namespace UI {
 
+	class MainMenuUIController;
 
 	class UIService {
 	private:

@@ -11,17 +11,17 @@ namespace Player {
 
     class PlayerModel {
     private:
-        Vector2f initialPlayerPosition = Vector2f(500.0f, 500.0f);
+        Vector2f initialPlayerPosition = Vector2f(950.0f, 950.0f);
         Vector2f playerPositon;
         PlayerState playerState;
         int playerScore;
 
     public:
 
-        const Vector2f leftMostPosition = Vector2f(40.0f, 0.0f);
-        const Vector2f rightMostPosition = Vector2f(700.0f, 0.0f);
+        const Vector2f leftMostPosition = Vector2f(50.0f, 950.0f);
+        const Vector2f rightMostPosition = Vector2f(1800.0f, 950.0f);
 
-        const float maximumSpeed = 200.0f;
+        const float maximumSpeed = 350.0f;
 
         PlayerModel();
         ~PlayerModel();
