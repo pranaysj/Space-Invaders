@@ -74,5 +74,17 @@
     <ClInclude Include="Header\Time\TimeService.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Header\UI\UIService.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\UI\MainMenu\MainMenuUIController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\UI\MainMenu\MainMenuUIController.cpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\UI\UIService.cpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

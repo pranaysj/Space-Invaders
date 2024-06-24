@@ -2,7 +2,6 @@
 #include<SFML/Graphics.hpp>
 
 namespace Event{
-    using namespace sf;
     class EventService{
         private :
             sf::Event gameEvent;
