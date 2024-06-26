@@ -142,6 +142,8 @@
     <ClCompile Include="Source\Player\PlayerService.cpp" />
     <ClCompile Include="Source\Player\PlayerView.cpp" />
     <ClCompile Include="Source\Time\TimeService.cpp" />
+    <ClCompile Include="Source\UI\MainMenu\MainMenuUIController.cpp" />
+    <ClCompile Include="Source\UI\UIService.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header\Event\EventService.h" />
@@ -255,8 +257,6 @@
     <ClInclude Include="sfml\include\SFML\Window\WindowBase.hpp" />
     <ClInclude Include="sfml\include\SFML\Window\WindowHandle.hpp" />
     <ClInclude Include="sfml\include\SFML\Window\WindowStyle.hpp" />
-    <ClInclude Include="Source\UI\MainMenu\MainMenuUIController.cpp" />
-    <ClInclude Include="Source\UI\UIService.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="assets\fonts\bubbleBobble.ttf" />
@@ -311,10 +311,15 @@
     <None Include="Space-Invaders\x64\Debug\vc143.idb" />
     <None Include="Space-Invaders\x64\Debug\vc143.pdb" />
     <None Include="x64\Debug\openal32.dll" />
+    <None Include="x64\Debug\sfml-audio-2.dll" />
     <None Include="x64\Debug\sfml-audio-d-2.dll" />
+    <None Include="x64\Debug\sfml-graphics-2.dll" />
     <None Include="x64\Debug\sfml-graphics-d-2.dll" />
+    <None Include="x64\Debug\sfml-network-2.dll" />
     <None Include="x64\Debug\sfml-network-d-2.dll" />
+    <None Include="x64\Debug\sfml-system-2.dll" />
     <None Include="x64\Debug\sfml-system-d-2.dll" />
+    <None Include="x64\Debug\sfml-window-2.dll" />
     <None Include="x64\Debug\sfml-window-d-2.dll" />
     <None Include="x64\Debug\Space-Invaders.pdb" />
   </ItemGroup>

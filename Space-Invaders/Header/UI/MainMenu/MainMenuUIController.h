@@ -9,7 +9,7 @@ namespace UI {
 			const sf::String instructionsButtonTexturePath = "assets/textures/instructions_button.png";
 			const sf::String quitButtonTexturePath = "assets/textures/quit_button.png";
 
-			const float buttonWidth = 400.f;
+			const float buttonWidth = 300.f;
 			const float buttonHeight = 140.f;
 
 			sf::Texture backgroundTexture;

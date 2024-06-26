@@ -60,8 +60,8 @@ namespace Global {
 
     void ServiceLocator::Render() {
         graphicService->Render();
-        playerService->Render();
         uiService->Render();
+        playerService->Render();
     }
 
     GraphicService* ServiceLocator::GetGraphicsService() {

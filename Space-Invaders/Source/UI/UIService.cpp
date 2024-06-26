@@ -1,10 +1,8 @@
 
 #include "../../Header/UI/UIService.h"
 
-namespace UI {
+namespace UI{
 
-	using namespace Main;
-	using namespace MainMenu;
 
 	void UIService::CreateControllers() {
 		mainMenuController = new MainMenu::MainMenuUIController();
@@ -32,10 +30,10 @@ namespace UI {
 	}
 
 	void UIService::Update() {
-
+		mainMenuController->Update();
 	}
 
 	void UIService::Render() {
-
+		mainMenuController->Render();
 	}
 }

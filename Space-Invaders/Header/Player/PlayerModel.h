@@ -11,7 +11,7 @@ namespace Player {
 
     class PlayerModel {
     private:
-        Vector2f initialPlayerPosition = Vector2f(950.0f, 950.0f);
+        Vector2f initialPlayerPosition = Vector2f(950.0f, 930.0f);
         Vector2f playerPositon;
         PlayerState playerState;
         int playerScore;

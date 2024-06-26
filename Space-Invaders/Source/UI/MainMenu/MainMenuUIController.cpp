@@ -39,7 +39,7 @@ namespace UI {
 		void MainMenuUIController::ScaleBackgroundImage(){
 			backgroundSprite.setScale(
 				static_cast<float>(gameWindow->getSize().x) / backgroundSprite.getTexture()->getSize().x,
-				static_cast<float>(gameWindow->getSize().x) / backgroundSprite.getTexture()->getSize().y
+				static_cast<float>(gameWindow->getSize().y) / backgroundSprite.getTexture()->getSize().y
 			);
 		}
 

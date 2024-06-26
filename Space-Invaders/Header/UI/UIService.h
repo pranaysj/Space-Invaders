@@ -3,8 +3,6 @@
 
 namespace UI {
 
-	class MainMenuUIController;
-
 	class UIService {
 	private:
 		MainMenu::MainMenuUIController* mainMenuController;
