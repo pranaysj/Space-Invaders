@@ -63,5 +63,12 @@ namespace Event {
         return gameEvent.key.code == Keyboard::Right;
     }
 
+    bool EventService::PressedLeftMouseButton() {
+        return gameEvent.type == sf::Event::MouseButtonPressed && gameEvent.mouseButton.button == sf::Mouse::Left;
+    }
+
+    bool EventService::PressedRightMouseButton() {
+        return gameEvent.type == sf::Event::MouseButtonPressed && gameEvent.mouseButton.button == sf::Mouse::Right;
+    }
 
 }

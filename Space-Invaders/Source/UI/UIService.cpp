@@ -1,11 +1,14 @@
 
 #include "../../Header/UI/UIService.h"
+#include "../../Header/Main/GameService.h"
 
 namespace UI{
 
+	using namespace Main;
+	using namespace MainMenu;
 
 	void UIService::CreateControllers() {
-		mainMenuController = new MainMenu::MainMenuUIController();
+		mainMenuController = new MainMenuUIController();
 	}
 
 	void UIService::InitializeControllers() {
@@ -30,10 +33,21 @@ namespace UI{
 	}
 
 	void UIService::Update() {
-		mainMenuController->Update();
+
+		switch (GameService::GetGameState())
+		{
+			case GameState::MAIN_MENU:
+				return mainMenuController->Update();
+			break;
+		}
 	}
 
 	void UIService::Render() {
-		mainMenuController->Render();
+		switch (GameService::GetGameState())
+		{
+			case GameState::MAIN_MENU:
+				return mainMenuController->Render();
+			break;
+		}
 	}
 }

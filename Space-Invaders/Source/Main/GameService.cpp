@@ -7,9 +7,14 @@ namespace Main{
 
     GameState GameService::currentState = GameState::BOOT;
 
+    void GameService::ShowMainMenu() {
+        SetGameState(GameState::MAIN_MENU);
+    }
+
     void GameService::Initialize() {
         serviceLocator->Initialize();
         InitializeVariable();
+        ShowMainMenu();
     }
 
     void GameService::InitializeVariable() {

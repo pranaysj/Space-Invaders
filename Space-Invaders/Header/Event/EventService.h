@@ -23,6 +23,8 @@ namespace Event{
             bool PressedLeftKey();
             bool PressedRightKey();
 
+            bool PressedLeftMouseButton();
+            bool PressedRightMouseButton();
     };
 
 }

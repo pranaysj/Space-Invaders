@@ -19,6 +19,8 @@ namespace Main {
         Global::ServiceLocator* serviceLocator;
         RenderWindow* gameWindow;
 
+        void ShowMainMenu();
+
         void Initialize();
         void InitializeVariable();
         void Destory();
