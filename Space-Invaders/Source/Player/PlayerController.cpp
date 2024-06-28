@@ -2,9 +2,11 @@
 #include"../../Header/Global/ServiceLocator.h"
 #include "../../Header/Player/PlayerModel.h"
 #include "../../Header/Player/PlayerView.h"
+#include "../../Header/Event/EventService.h"
 
 namespace Player {
 	using namespace Global;
+	using namespace Event;
 
 	PlayerController::PlayerController() {
 		playerModel = new PlayerModel();
@@ -31,10 +33,12 @@ namespace Player {
 	}
 
 	void PlayerController::ProcessPlayerInput() {
-		if (Keyboard::isKeyPressed(Keyboard::Left)) {
+		EventService* eventService = ServiceLocator::GetInstance()->GetEventService();
+
+		if (eventService->PressedLeftKey() || eventService->PressedAKey()) {
 			MoveLeft();
 		}
-		if (Keyboard::isKeyPressed(Keyboard::Right)) {
+		if (eventService->PressedRightKey() || eventService->PressedDKey()) {
 			MoveRight();
 		}
 	}
