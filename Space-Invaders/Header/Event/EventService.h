@@ -1,0 +1,30 @@
+#pragma once
+#include<SFML/Graphics.hpp>
+
+namespace Event{
+    class EventService{
+        private :
+            sf::Event gameEvent;
+            sf::RenderWindow *gameWindow;
+            bool IsGameWindowOpen();
+            bool HasQuitGame();
+            bool GameWindowWasClosed();
+        
+        public :
+            EventService();
+            ~EventService();
+
+            void Initialize();
+            void Update();
+            void ProcessEvent();
+            bool PressedEscapeKey();
+            bool IsKeyboardEvent();
+
+            bool PressedLeftKey();
+            bool PressedRightKey();
+
+            bool PressedLeftMouseButton();
+            bool PressedRightMouseButton();
+    };
+
+}
