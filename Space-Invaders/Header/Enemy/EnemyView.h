@@ -1,4 +1,5 @@
 #pragma once
+#include<SFML/Graphics.hpp>
 
 namespace Enemy {
 	using namespace sf;
@@ -10,9 +11,9 @@ namespace Enemy {
 		EnemyController* enemyController;
 		RenderWindow* gameWindow;
 
-		const String enemyTexturePath = "assets/textures/Ultraman.png";
+		const String enemyTexturePath = "assets/textures/zapper.png";
 		const float enemySpriteWidth = 80.0f;
-		const float enemySpriteHeigh = 135.0f;
+		const float enemySpriteHeigh = 100.0f;
 
 		Texture enemyTexture;
 		Sprite enemySprite;

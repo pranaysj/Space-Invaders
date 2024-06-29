@@ -4,23 +4,30 @@
 #include"../../Header/Enemy/EnemyView.h"
 
 namespace Enemy {
-	EnemyController::EnemyController()
-	{
+	EnemyController::EnemyController(){
+		enemymodel = new EnemyModel();
+		enemyView = new EnemyView();
 	}
-	EnemyController::~EnemyController()
-	{
+
+	EnemyController::~EnemyController(){
+		delete(enemymodel);
+		delete(enemyView);
 	}
-	void EnemyController::Initialize()
-	{
+
+	void EnemyController::Initialize(){
+		enemymodel->Initialize();
+		enemyView->Initialize(this);
 	}
-	void EnemyController::Update()
-	{
+
+	void EnemyController::Update(){
+		enemyView->Update();
 	}
-	void EnemyController::Render()
-	{
+
+	void EnemyController::Render(){
+		enemyView->Render();
 	}
-	sf::Vector2f EnemyController::GetEnemyPosition()
-	{
-		return sf::Vector2f();
+	
+	sf::Vector2f EnemyController::GetEnemyPosition(){
+		return enemymodel->GetEnemyCurrentPositon();
 	}
 }

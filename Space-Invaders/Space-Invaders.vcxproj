@@ -134,6 +134,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Source\Enemy\EnemyController.cpp" />
+    <ClCompile Include="Source\Enemy\EnemyModel.cpp" />
+    <ClCompile Include="Source\Enemy\EnemyService.cpp" />
+    <ClCompile Include="Source\Enemy\EnemyView.cpp" />
     <ClCompile Include="Source\Event\EventService.cpp" />
     <ClCompile Include="Source\Global\ServiceLocator.cpp" />
     <ClCompile Include="Source\Graphics\GraphicService.cpp" />
@@ -262,10 +266,6 @@
     <ClInclude Include="sfml\include\SFML\Window\WindowBase.hpp" />
     <ClInclude Include="sfml\include\SFML\Window\WindowHandle.hpp" />
     <ClInclude Include="sfml\include\SFML\Window\WindowStyle.hpp" />
-    <ClInclude Include="Source\Enemy\EnemyController.cpp" />
-    <ClInclude Include="Source\Enemy\EnemyModel.cpp" />
-    <ClInclude Include="Source\Enemy\EnemyService.cpp" />
-    <ClInclude Include="Source\Enemy\EnemyView.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="assets\fonts\bubbleBobble.ttf" />

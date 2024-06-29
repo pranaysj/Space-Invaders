@@ -1,5 +1,6 @@
 #pragma once
 #include "../../Header/Enemy/EnemyModel.h"
+#include <iostream>
 
 namespace Enemy {
 	Enemy::EnemyModel::EnemyModel()
@@ -10,13 +11,9 @@ namespace Enemy {
 	}
 	void EnemyModel::Initialize(){
 		enemyCurrentPositon = enemyStartRefPositon;
+		//enemyCurrentPositon = Vector2f(100.0f,100.0f);
 	}
-	void EnemyModel::Update()
-	{
-	}
-	void EnemyModel::Render()
-	{
-	}
+	
 	void EnemyModel::SetEnemyCurrentPositon(Vector2f _posiiton){
 		enemyCurrentPositon = _posiiton;
 	}

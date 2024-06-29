@@ -11,15 +11,14 @@ namespace Enemy {
 
 	class EnemyModel {
 	private:
+		Vector2f enemyStartRefPositon = Vector2f(100.0f, 0.0f);
 		Vector2f enemyCurrentPositon;
-		Vector2f enemyStartRefPositon;
+
 	public:
 		EnemyModel();
 		~EnemyModel();
 
 		void Initialize();
-		void Update();
-		void Render();
 
 		void SetEnemyCurrentPositon(Vector2f _posiiton);
 		Vector2f GetEnemyCurrentPositon();
