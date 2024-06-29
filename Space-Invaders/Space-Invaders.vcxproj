@@ -147,6 +147,10 @@
     <ClCompile Include="Source\UI\UIService.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Header\Enemy\EnemyController.h" />
+    <ClInclude Include="Header\Enemy\EnemyModel.h" />
+    <ClInclude Include="Header\Enemy\EnemyService.h" />
+    <ClInclude Include="Header\Enemy\EnemyView.h" />
     <ClInclude Include="Header\Event\EventService.h" />
     <ClInclude Include="Header\Global\ServiceLocator.h" />
     <ClInclude Include="Header\Graphics\GraphicService.h" />
@@ -258,6 +262,10 @@
     <ClInclude Include="sfml\include\SFML\Window\WindowBase.hpp" />
     <ClInclude Include="sfml\include\SFML\Window\WindowHandle.hpp" />
     <ClInclude Include="sfml\include\SFML\Window\WindowStyle.hpp" />
+    <ClInclude Include="Source\Enemy\EnemyController.cpp" />
+    <ClInclude Include="Source\Enemy\EnemyModel.cpp" />
+    <ClInclude Include="Source\Enemy\EnemyService.cpp" />
+    <ClInclude Include="Source\Enemy\EnemyView.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="assets\fonts\bubbleBobble.ttf" />
