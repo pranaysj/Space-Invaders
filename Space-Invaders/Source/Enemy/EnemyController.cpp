@@ -28,6 +28,6 @@ namespace Enemy {
 	}
 	
 	sf::Vector2f EnemyController::GetEnemyPosition(){
-		return enemymodel->GetEnemyCurrentPositon();
+		return enemymodel->GetEnemyPositon();
 	}
 }

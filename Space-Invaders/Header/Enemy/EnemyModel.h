@@ -20,10 +20,10 @@ namespace Enemy {
 
 		void Initialize();
 
-		void SetEnemyCurrentPositon(Vector2f _posiiton);
-		Vector2f GetEnemyCurrentPositon();
+		void SetEnemyPositon(Vector2f _posiiton);
+		Vector2f GetEnemyPositon();
 		
-		void SetEnemyStartRefPositon(Vector2f _posiiton);
-		Vector2f GetenemyStartRefPositon();
+		Vector2f GetRefPositon();
+		void SetRefPositon(Vector2f _posiiton);
 	};
 }

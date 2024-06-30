@@ -11,8 +11,8 @@ namespace Enemy {
 		EnemyController* enemyController;
 		RenderWindow* gameWindow;
 
-		const String enemyTexturePath = "assets/textures/zapper.png";
-		const float enemySpriteWidth = 80.0f;
+		const String enemyTexturePath = "assets/textures/Drone _1.png";
+		const float enemySpriteWidth = 100.0f;
 		const float enemySpriteHeigh = 100.0f;
 
 		Texture enemyTexture;

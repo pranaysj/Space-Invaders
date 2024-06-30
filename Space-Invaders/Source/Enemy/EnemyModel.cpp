@@ -14,18 +14,18 @@ namespace Enemy {
 		//enemyCurrentPositon = Vector2f(100.0f,100.0f);
 	}
 	
-	void EnemyModel::SetEnemyCurrentPositon(Vector2f _posiiton){
+	void EnemyModel::SetEnemyPositon(Vector2f _posiiton){
 		enemyCurrentPositon = _posiiton;
 	}
-	Vector2f EnemyModel::GetEnemyCurrentPositon() {
+	Vector2f EnemyModel::GetEnemyPositon() {
 		return enemyCurrentPositon;
 	}
 
-	void EnemyModel::SetEnemyStartRefPositon(Vector2f _posiiton) {
+	void EnemyModel::SetRefPositon(Vector2f _posiiton) {
 		enemyStartRefPositon = _posiiton;
 	}
 
-	Vector2f Enemy::EnemyModel::GetenemyStartRefPositon()
+	Vector2f Enemy::EnemyModel::GetRefPositon()
 	{
 		return enemyStartRefPositon;;
 	}

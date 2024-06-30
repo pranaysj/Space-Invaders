@@ -335,6 +335,8 @@
   <ItemGroup>
     <Image Include="assets\textures\bunker.png" />
     <Image Include="assets\textures\circle_animation.png" />
+    <Image Include="assets\textures\Drone _1.png" />
+    <Image Include="assets\textures\Drone _2.png" />
     <Image Include="assets\textures\explosion.png" />
     <Image Include="assets\textures\frost_beam.png" />
     <Image Include="assets\textures\InstructionsButton.png" />

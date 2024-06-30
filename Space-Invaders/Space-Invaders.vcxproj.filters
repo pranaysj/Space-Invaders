@@ -577,6 +577,12 @@
     <Image Include="assets\textures\QuitButton.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="assets\textures\Drone _1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\textures\Drone _2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <Object Include="Space-Invaders\x64\Debug\EventService.obj" />
