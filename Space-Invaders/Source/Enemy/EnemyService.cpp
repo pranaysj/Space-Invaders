@@ -2,15 +2,33 @@
 #include"../../Header/Enemy/EnemyService.h"
 #include"../../Header/Enemy/EnemyController.h"
 #include "../../Header/Global/ServiceLocator.h"
+#include "../../Header/Time/TimeService.h"
 
 namespace Enemy {
+	using namespace Time;
+	using namespace Global;
+
+	void EnemyService::UpdateSpawnTimer(){
+		spwanTimer += ServiceLocator::GetInstance()->GetTimeService()->GetDeltaTime();
+	}
+
+	void EnemyService::ProcessEnemySpawn(){
+		if (spwanTimer >= spawnInterval) {
+			SpawnEnemy();
+			spwanTimer = 0;
+		}
+	}
+
 	void EnemyService::Destory(){
-		delete(controller);
-		delete(spawnEnemy);
+		/*delete(controller);
+		delete(spawnEnemy);*/
+		for (int i = 0; i < enemyList.size(); i++)
+		{
+			delete(enemyList[i]);
+		}
 	}
 
 	EnemyService::EnemyService(){
-		controller = new EnemyController();
 	}
 
 	EnemyService::~EnemyService(){
@@ -18,21 +36,33 @@ namespace Enemy {
 	}
 
 	void EnemyService::Initialize(){
-		controller->Initialize();
-		SpawnEnemy();
+		spwanTimer = spawnInterval;
 	}
 
 	void EnemyService::Update(){
 		/*Detect the GameState then Update*/
-		controller->Update();
+
+		UpdateSpawnTimer();
+		ProcessEnemySpawn();
+
+		for (int i = 0; i < enemyList.size(); i++)
+		{
+			enemyList[i]->Update();
+		}
 	}
 
 	void EnemyService::Render(){
 		/*Detect the GameState then Render*/
-		controller->Render();
+		for (int i = 0; i < enemyList.size(); i++)
+		{
+			enemyList[i]->Render();
+		}
 	}
 
-	EnemyController* EnemyService::SpawnEnemy(){
-		return spawnEnemy = new EnemyController();
+	void EnemyService::SpawnEnemy(){
+		EnemyController* enemyController = new EnemyController();
+		enemyController->Initialize();
+
+		enemyList.push_back(enemyController);
 	}
 }
