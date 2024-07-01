@@ -12,6 +12,11 @@ namespace Enemy {
 		EnemyModel* enemymodel;
 		EnemyView* enemyView;
 
+		void Move();
+		void MoveLeft();
+		void MoveRight();
+		void MoveDown();
+
 	public:
 		EnemyController();
 		~EnemyController();

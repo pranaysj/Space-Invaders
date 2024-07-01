@@ -23,10 +23,12 @@ namespace Enemy {
 	}
 
 	void EnemyService::Update(){
+		/*Detect the GameState then Update*/
 		controller->Update();
 	}
 
 	void EnemyService::Render(){
+		/*Detect the GameState then Render*/
 		controller->Render();
 	}
 

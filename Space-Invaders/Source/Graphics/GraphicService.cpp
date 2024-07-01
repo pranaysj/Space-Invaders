@@ -30,6 +30,7 @@ namespace Graphics {
     }
 
     void GraphicService::Update() {
+
     }
 
     void GraphicService::Render() {

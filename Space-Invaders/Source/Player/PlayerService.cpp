@@ -16,10 +16,12 @@ namespace Player {
     }
 
     void PlayerService::Update() {
+        //Detect the GameState then Update
         playerController->Update();
     }
 
     void PlayerService::Render() {
+        //Detect the GameState then Render
         playerController->Render();
     }
 

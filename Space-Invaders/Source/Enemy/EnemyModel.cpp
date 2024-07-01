@@ -11,7 +11,7 @@ namespace Enemy {
 	}
 	void EnemyModel::Initialize(){
 		enemyCurrentPositon = enemyStartRefPositon;
-		//enemyCurrentPositon = Vector2f(100.0f,100.0f);
+		enemyMovement = MovementDirection::RIGHT;
 	}
 	
 	void EnemyModel::SetEnemyPositon(Vector2f _posiiton){
@@ -29,4 +29,13 @@ namespace Enemy {
 	{
 		return enemyStartRefPositon;;
 	}
+
+	void EnemyModel::SetEnemyMovement(MovementDirection _movement){
+		enemyMovement = _movement;
+	}
+
+	MovementDirection EnemyModel::GetEnemyMovement(){
+		return enemyMovement;
+	}
+
 }
